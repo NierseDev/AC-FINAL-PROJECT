@@ -7,7 +7,7 @@ st.markdown(
     "Harold Salvador,\n"
     "Jude Fajardo"
 )
-menu_option = st.sidebar.radio("Select Mode", ["Symmetric", "Asymmetric", "hashing"])
+menu_option = st.sidebar.selectbox("Select Mode", ["Symmetric", "Asymmetric", "hashing"])
 if menu_option == "Symmetric":
     st.subheader("Symmetric Encryption")
 elif menu_option == "Asymmetric":
