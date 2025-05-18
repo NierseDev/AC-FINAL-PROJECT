@@ -7,10 +7,13 @@ st.markdown(
     "Harold Salvador,\n"
     "Jude Fajardo"
 )
-menu_option = st.sidebar.selectbox("Select Mode", ["Symmetric", "Asymmetric", "hashing"])
+
+st.sidebar.markdown("<h2 style='color:#4CAF50;'>🔐 Encryption Mode</h2>", unsafe_allow_html=True)
+menu_option = st.sidebar.radio("", ["Symmetric", "Asymmetric", "Hashing"])
+
 if menu_option == "Symmetric":
     st.subheader("Symmetric Encryption")
 elif menu_option == "Asymmetric":
     st.subheader("Asymmetric Encryption")
-elif menu_option == "hashing":
+elif menu_option == "Hashing":
     st.subheader("Hashing")
