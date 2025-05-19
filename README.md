@@ -1,19 +1,41 @@
-# 🎈 Blank app template
+# CryptoGadget | Applied Cryptography | April 26, 2025
 
-A simple Streamlit app template for you to modify!
+**Group Members:**
+1. ***Hamzah Ibarreta Cuadra***
+2. ***Harold Salvador***
+3. ***Jude Fajardo***
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+## Introduction
+(Brief overview of the project, its purpose, and the importance of cryptography)
 
-### How to run it on your own machine
+## Project Objectives
+(List at least 3 specific objectives your project aims to achieve)
 
-1. Install the requirements
+## Discussions
+(Describe the overall application architecture and UI choice.)
 
-   ```
-   $ pip install -r requirements.txt
-   ```
+(For each implemented cryptographic algorithm: Name and type (Symmetric/Asymmetric/Hash) as well as Brief history/background)
 
-2. Run the app
+(Description of the process/how it works (can be high-level or include simplified pseudocode)
 
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+(Libraries used for its implementation)
+
+(How it's integrated into your application)
+
+## Sample Runs and Outputs
+Include screen snippets (screenshots) or text-based output examples for each algorithm's functionality (encryption, decryption, hashing for both text and files where applicable).
+
+Embed images directly in the README.md or link to them within the repository. Use Markdown code blocks for text output.
+
+Example:
+
+Python Code:
+```Python
+print("hello")
+```
+
+```
+This is just text in a code block
+```
+
+More can be found here: ![Markdown Guide: Basic Syntax](https://www.markdownguide.org/basic-syntax/)
