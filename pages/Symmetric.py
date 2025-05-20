@@ -104,9 +104,9 @@ st.title("Symmetric Encryption/Decryption")
 
 # Sidebar Inputs
 with st.sidebar:
-    st.header("Inputs")
     operation = st.selectbox("Operation", ["Encrypt", "Decrypt"])
     algorithm = st.selectbox("Algorithm", ["Fernet", "AES (CBC)", "ChaCha20"])
+    st.header("Input:")
     text_input = st.text_area("Text")
     key_input = ""
     password = ""
