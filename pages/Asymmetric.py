@@ -38,8 +38,6 @@ def serialize_key(key, is_private=True):
             format=serialization.PublicFormat.SubjectPublicKeyInfo
         ).decode('utf-8')
 
-priv_key, pub_key = None, None
-
 with st.sidebar:
     st.title("Input:")    
     algorithm = st.selectbox("Select Algorithm", ["RSA", "DSA", "ECDSA"])
@@ -56,14 +54,13 @@ with st.sidebar:
             st.error("Unsupported algorithm selected.")
             st.stop()
             
-if priv_key and pub_key:
-    st.subheader("Private Key")
-    st.code(serialize_key(priv_key, is_private=True))
+st.title("Asymmetric Key Generation Demo")
+
+st.subheader("Private Key")
+st.code(serialize_key(priv_key, is_private=True))
         
-    st.subheader("Public Key")
-    st.code(serialize_key(pub_key, is_private=False))
-else:
-    st.info("Please generate keys from the sidebar.")
+st.subheader("Public Key")
+st.code(serialize_key(pub_key, is_private=False))
         
 if message:
     st.markdown("### Message")
