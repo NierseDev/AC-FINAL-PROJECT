@@ -38,9 +38,8 @@ def serialize_key(key, is_private=True):
             format=serialization.PublicFormat.SubjectPublicKeyInfo
         ).decode('utf-8')
 
-# Sidebar: inputs placed near the bottom
 with st.sidebar:
-    st.title("Key Options")    
+    st.title("Input:")    
     algorithm = st.selectbox("Select Algorithm", ["RSA", "DSA", "ECDSA"])
     custom_message = st.text_input("Custom Message (optional)")
 
