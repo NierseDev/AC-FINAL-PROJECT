@@ -53,16 +53,15 @@ with st.sidebar:
         else:
             st.error("Unsupported algorithm selected.")
             st.stop()
-        
-        st.subheader("Private Key")
-        st.code(serialize_key(priv_key, is_private=True))
-        
-        st.subheader("Public Key")
-        st.code(serialize_key(pub_key, is_private=False))
-        
-        if message:
-            st.markdown("### Message")
-            st.write(message)
-    
-
+            
 st.title("Asymmetric Key Generation Demo")
+
+st.subheader("Private Key")
+st.code(serialize_key(priv_key, is_private=True))
+        
+st.subheader("Public Key")
+st.code(serialize_key(pub_key, is_private=False))
+        
+if message:
+    st.markdown("### Message")
+    st.write(message)
