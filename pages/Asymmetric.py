@@ -40,9 +40,7 @@ def serialize_key(key, is_private=True):
 
 # Sidebar: inputs placed near the bottom
 with st.sidebar:
-    st.title("Key Options")
-    for _ in range(10):
-        st.text("")
+    st.title("Key Options")    
     algorithm = st.selectbox("Select Algorithm", ["RSA", "DSA", "ECDSA"])
     custom_message = st.text_input("Custom Message (optional)")
 
