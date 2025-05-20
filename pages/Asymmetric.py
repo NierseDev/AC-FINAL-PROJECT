@@ -41,7 +41,29 @@ def serialize_key(key, is_private=True):
 with st.sidebar:
     st.title("Input:")    
     algorithm = st.selectbox("Select Algorithm", ["RSA", "DSA", "ECDSA"])
-    custom_message = st.text_input("Custom Message (optional)")
+    message = st.text_input("Message (Optional)")
+
+    if st.button("Generate Keys"):
+        if algorithm == "RSA":
+            priv_key, pub_key = generate_rsa_keys()
+        elif algorithm == "DSA":
+            priv_key, pub_key = generate_dsa_keys()
+        elif algorithm == "ECDSA":
+            priv_key, pub_key = generate_ecdsa_keys()
+        else:
+            st.error("Unsupported algorithm selected.")
+            st.stop()
+        
+        st.subheader("Private Key")
+        st.code(serialize_key(priv_key, is_private=True))
+        
+        st.subheader("Public Key")
+        st.code(serialize_key(pub_key, is_private=False))
+        
+        if message:
+            st.markdown("### Message")
+            st.write(message)
+    
 
 st.title("Asymmetric Key Generation Demo")
 
@@ -62,6 +84,6 @@ if st.button("Generate Keys"):
     st.subheader("Public Key")
     st.code(serialize_key(pub_key, is_private=False))
     
-    if custom_message:
+    if message:
         st.markdown("### Custom Message")
-        st.write(custom_message)
+        st.write(message)
