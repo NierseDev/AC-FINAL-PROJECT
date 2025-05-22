@@ -40,6 +40,9 @@ def serialize_key(key, is_private=True):
 
 priv_key, pub_key = None, None
 
+st.title("Asymmetric Encryption/Decryption")
+
+# Sidebar Inputs
 with st.sidebar:
     st.title("Input:")    
     algorithm = st.selectbox("Select Algorithm", ["RSA", "DSA", "ECDSA"])

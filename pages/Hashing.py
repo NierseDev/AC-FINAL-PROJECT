@@ -1,7 +1,9 @@
 import streamlit as st
 import hashlib
 
-# Using the sidebar for text input
+st.title("Hashing")
+
+# Sidebar Inputs
 with st.sidebar:
     st.title("Input:")    
     hash_type = st.selectbox("Select Hash", ["MD5", "SHA1", "SHA256"])

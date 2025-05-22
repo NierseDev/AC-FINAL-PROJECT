@@ -163,3 +163,5 @@ if execute:
                     decrypted = decrypt_chacha20(text_input, password)
                     st.subheader("Decrypted Message")
                     st.code(decrypted)
+else:
+    st.info("Please enter text in the sidebar for encryption and decryption.")
