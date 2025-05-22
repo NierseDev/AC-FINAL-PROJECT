@@ -164,4 +164,4 @@ if execute:
                     st.subheader("Decrypted Message")
                     st.code(decrypted)
 else:
-    st.info("Please enter text in the sidebar for encryption and decryption.")
+    st.info("\nPlease enter text in the sidebar for encryption and decryption.")

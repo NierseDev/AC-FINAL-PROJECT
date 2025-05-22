@@ -29,4 +29,4 @@ if user_input:
         st.subheader("Hashed Text:") 
         st.write("**SHA-256:**", sha256_hash)
 else:
-    st.info("Please enter text in the sidebar to see the hashes.")
+    st.info("\nPlease enter text in the sidebar to see the hashes.")
