@@ -8,9 +8,9 @@ with st.sidebar:
     st.title("Input:")    
     hash_type = st.selectbox("Select Hash", ["MD5", "SHA1", "SHA256"])
     user_input = st.text_input("Enter text to hash:")
-    submit_button = st.button("Submit")
-
-if user_input:
+    generate_hash = st.button("Generate Hash")
+   
+if generate_hash and user_input:
     if hash_type == "MD5":  
         hashed = hashlib.md5(user_input.encode()).hexdigest()
         hash_label = "**MD5:**"
@@ -28,5 +28,6 @@ if user_input:
     st.write(user_input)
     st.subheader("Hashed Text:") 
     st.write(hash_label, hashed)
-else:
-    st.info("\nPlease enter text in the sidebar to see the hashes.")
+elif not user_input:
+    st.info("Please enter text in the sidebar to see the hashes.")
+
