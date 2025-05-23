@@ -8,25 +8,25 @@ with st.sidebar:
     st.title("Input:")    
     hash_type = st.selectbox("Select Hash", ["MD5", "SHA1", "SHA256"])
     user_input = st.text_input("Enter text to hash:")
+    submit_button = st.button("Submit")
 
 if user_input:
-    if user_input == "MD5":  
-        md5_hash = hashlib.md5(user_input.encode()).hexdigest()
-        st.subheader("Input Text:")
-        st.write(user_input)
-        st.subheader("Hashed Text:") 
-        st.write("**MD5:**", md5_hash)
-    elif user_input == "SHA1":
-        sha1_hash = hashlib.sha1(user_input.encode()).hexdigest()
-        st.subheader("Input Text:")
-        st.write(user_input)
-        st.subheader("Hashed Text:") 
-        st.write("**SHA-1:**", sha1_hash)
-    elif user_input == "SHA256":
-        sha256_hash = hashlib.sha256(user_input.encode()).hexdigest()
-        st.subheader("Input Text:")
-        st.write(user_input)
-        st.subheader("Hashed Text:") 
-        st.write("**SHA-256:**", sha256_hash)
+    if hash_type == "MD5":  
+        hashed = hashlib.md5(user_input.encode()).hexdigest()
+        hash_label = "**MD5:**"
+    elif hash_type == "SHA1":
+        hashed = hashlib.sha1(user_input.encode()).hexdigest()
+        hash_label = "**SHA-1:**"
+    elif hash_type == "SHA256":
+        hashed = hashlib.sha256(user_input.encode()).hexdigest()
+        hash_label = "**SHA-256:**"
+    else:
+        hashed = ""
+        hash_label = f"Unknown hash type: {hash_type}"
+
+    st.subheader("Input Text:")
+    st.write(user_input)
+    st.subheader("Hashed Text:") 
+    st.write(hash_label, hashed)
 else:
     st.info("\nPlease enter text in the sidebar to see the hashes.")
