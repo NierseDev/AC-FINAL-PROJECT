@@ -24,7 +24,7 @@ The Crypto Gadget tool has been developed using Streamlit and demonstrates every
 There’s a specific educational purpose for each cryptographic algorithm we apply. The hashing section uses MD5, SHA-1 and SHA-256 algorithms for the purpose of checking data integrity. In symmetric encryption, Fernet, AES (CBC mode) and ChaCha20 methods are covered, allowing you to see how passwords are used to generate a secret key and how random salt/IV are added. The module’s asymmetric part provides the ability to make key pairs using RSA, DSA and ECDSA. Knowing these algorithms is important because public-key cryptography is key to digital signatures and strong information security on the internet. The applications are made possible by Python’s cryptography and hashlib libraries and the results are shown in real time for easy understanding.
 
 ## Sample Runs and Outputs
-## Asymmetric Encryption/Decryption:
+### Asymmetric Encryption/Decryption:
 
 Generate Keys
 
@@ -70,7 +70,7 @@ K8C2sR+efC4Uo5QhYEt39lUG8dOhlH9y2YDL2o5CVX8xbb1iWqobLX1gT+aEwcqq
 QQIDAQAB
 -----END PUBLIC KEY-----
 ```
-## Symmetric Encrpytion/Decryption:
+### Symmetric Encrpytion/Decryption:
 Fernet (Encrypt)
 Text:
 ```
